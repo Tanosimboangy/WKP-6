@@ -25,6 +25,7 @@ h1 {
 }
 ul {
     display: flex;
+    padding: 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
