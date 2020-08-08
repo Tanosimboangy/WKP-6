@@ -50,6 +50,8 @@ const vegetarianFood = document.querySelector('#vegetarian');
 // const thirdOrder = document.querySelector('.third_order');
 // const fourthOrder = document.querySelector('.fourth_order');
 // const fithOrder = document.querySelector('.fith_order');
+const outerModal = document.querySelector('.outer_modal');
+const innerModal = document.querySelector('.inner_modal');
 
 // Call the div container where we insert the html
 const foodList = document.querySelector('.food_list');
@@ -67,10 +69,10 @@ foodList.innerHTML = hotfood;
 
 
 // Grab for the spicy checkbox one in order to add the html
-const checkbox = document.querySelector("#spicy");
+const spicyCheckbox = document.querySelector("#spicy");
 // A function that mapping through the object and filtering the spicy elements
-
-const spicyFood =  foods.filter(food => food.spicy === true);
+const spicyTypeFood = e => {
+    const spicyFood =  foods.filter(food => food.spicy === true);
     const foodSpicy = spicyFood.map(spc => {
       return myhtml = `
                 <ul value="${spc.id}">
@@ -79,32 +81,35 @@ const spicyFood =  foods.filter(food => food.spicy === true);
                     <button class="add_button" value="${spc.id}">Add</button>
                 </ul>`;
     }).join('');
-
-foodList.innerHTML = foodSpicy;
-
-checkbox.addEventListener("click", spicyFood);
-console.log(spicyFood);
-
-
+    foodList.innerHTML = foodSpicy;
+    console.log(e);
+}
+spicyCheckbox.addEventListener("change", spicyTypeFood);
+// console.log(spicyFood);
 
 
-// const spicyFood = foods.filter(food => food.spicy === true);
-//     const foodSpicy = spicyFood.map(spicy => `
-//     <li value="${spicy.id}">
-//       <span>${spicy.title}</span>
-//       <span>${spicy.price}</span>
-//       <button value="${spicy.id}">add</button>
-//     </li>`).join('');
+// Grab for the spicy checkbox one in order to add the html
+const vgtCheckbox = document.querySelector("#vegetarian");
+// A function that mapping through the object and filtering the spicy elements
+const vgtTypeFood = e => {
+    const vgtFood =  foods.filter(food => food.vegetarian === true);
+    const foodVgt = vgtFood.map(vgt => {
+      return myhtml = `
+                <ul value="${vgt.id}">
+                    <li>${vgt.title}</li>
+                    <li>${vgt.price}</li>
+                    <button class="add_button" value="${vgt.id}">Add</button>
+                </ul>`;
+    }).join('');
+    foodList.innerHTML = foodVgt;
+    console.log(e);
+}
+vgtCheckbox.addEventListener("change", vgtTypeFood);
+// console.log(spicyFood);
 
 
 
-
-
-
-
-
-
-// const specialFood = e => {
+//  const specialFood = e => {
 //     console.log(foods);
 // }
 // vegetarianFood.addEventListener("click", specialFood);
