@@ -38,9 +38,7 @@ const foods = [
 
 
 const foodType = document.querySelector('.food_type');
-const spicyFood = document.querySelector("input[name=checkbox]");
 const vegetarianFood = document.querySelector('#vegetarian');
-
 // const firstAddButton = document.querySelector('.button_first');
 // const secondAddButton = document.querySelector('.button_second');
 // const thirdAddButton = document.querySelector('.button_third');
@@ -53,7 +51,9 @@ const vegetarianFood = document.querySelector('#vegetarian');
 // const fourthOrder = document.querySelector('.fourth_order');
 // const fithOrder = document.querySelector('.fith_order');
 
+// Call the div container where we insert the html
 const foodList = document.querySelector('.food_list');
+// A function to insert the html
 const hotfood = foods.map(food => {
     return  `
     <ul>
@@ -62,37 +62,39 @@ const hotfood = foods.map(food => {
         <button class="add_button">Add</button>
     </ul>`;
 }).join(" ");
-
 foodList.innerHTML = hotfood;
-console.log(hotfood);
+// console.log(hotfood);
+
+
+// Grab for the spicy checkbox one in order to add the html
+const checkbox = document.querySelector("#spicy");
+// A function that mapping through the object and filtering the spicy elements
+
+const spicyFood =  foods.filter(food => food.spicy === true);
+    const foodSpicy = spicyFood.map(spc => {
+      return myhtml = `
+                <ul value="${spc.id}">
+                    <li>${spc.title}</li>
+                    <li>${spc.price}</li>
+                    <button class="add_button" value="${spc.id}">Add</button>
+                </ul>`;
+    }).join('');
+
+foodList.innerHTML = foodSpicy;
+
+checkbox.addEventListener("click", spicyFood);
+console.log(spicyFood);
 
 
 
 
-// const hotFood = e => {
-//     if (checkbox.checked === true) {
-//         const spicyfood = foods.filter(hotfood => hotFood.spicy);
-//         return myHTML = `
-//         <div>
-//             <ul>
-//                 <li>${spicyfood.title}</li>
-//                 <li>${spicyfood.price}</li>
-//                 <button class="add_button">Add</button>
-//             </ul>
-//         </div>
-//         `;
-//     } else {
-
-//     }
-//     console.log(spicyfood);
-// }
-
-
-
-
-
-
-
+// const spicyFood = foods.filter(food => food.spicy === true);
+//     const foodSpicy = spicyFood.map(spicy => `
+//     <li value="${spicy.id}">
+//       <span>${spicy.title}</span>
+//       <span>${spicy.price}</span>
+//       <button value="${spicy.id}">add</button>
+//     </li>`).join('');
 
 
 
