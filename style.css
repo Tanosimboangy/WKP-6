@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+    padding: 32px;
+}
+h1 {
+    place-self: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+}
+.list_container {
+    background-color: rgba(128, 128, 128, 0.48);
+    border-radius: 16px;
+    padding: 32px;
+    margin-right: 32px;
+    width: 400px;
+}
+.order_container {
+    background-color: rgba(128, 128, 128, 0.48);
+    border-radius: 16px;
+    padding: 32px;
+    width: 400px;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+li {
+    list-style: none;
+    padding: 0 1rem;
+}
+button {
+    padding: .5rem 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+}
+.order {
+    padding: 14px 24px;
+    color: white;
+    border-radius: 6px;
+    background-color: black;
+}
