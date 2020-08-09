@@ -46,3 +46,31 @@ button {
     border-radius: 6px;
     background-color: black;
 }
+
+.outer-modal {
+    display: grid;
+    place-items: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%);
+    pointer-events: none;
+    opacity: 1;
+}
+
+.open {
+    pointer-events: all;
+    opacity: 1;
+    background-color: rgb(83, 83, 83);
+}
+
+.inner-modal {
+    background-color: orange;
+    min-width: 300px;
+    min-height: 300px;
+    padding: 2rem;
+    border-radius: 5px;
+    opacity: 1;
+}
