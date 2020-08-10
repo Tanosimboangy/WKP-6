@@ -1,92 +1,47 @@
-# WKP6 - Hungry Student Restaurant
+2. If you had more time, what area of your work would you improve?
+3. Did you learn anything new while working on this project?
+4. What was the most challenging part for you?
+5. Would you like a new explanation about a specific topic?
+6. Any comments
 
-### Another website about food, really...
 
-Yes, but who doesn't like food? 😄
+## Explanation of my project in a few sentences
 
-This time, we're going to build a food delivery app, where we can see the meal options, select them, and see the result in our cart.
+1 _ First thing I did was creating the HTML and all necessary elements according to what the instructions said.
 
-### Users must be able to :
+2 _ Secondly, styled the html to get appropriate form/style.
 
--   See a list of five meal options
--   See the prices of each meal option
--   Add a meal to the cart
--   Filter the list to see only the vegetarian meals, or only the spicy ones
--   See their total bill
--   “Check out” - this doesn’t have to process payment, just simply display
-    a message stating the order as been confirmed.
+3 _ After that, I added the lists into the dom html
 
-### Bonus :
+4 _ Thirdly, I started to activate the checkbox:
 
--   Change the quantity of meals in the cart
--   Remove a meal from the cart
+- Creating a function for filtering the object in order to get the right elements for the spicy elements and displaying them when the checkbox is checked.
+- followed by the vegetarian checkbox and the same process.
 
-Here is an example of layout :
+## Area of my work I would improve
 
-![assets/1.png](assets/1.png)
+1 _ I need to improve my understanding the whole concepts in any project.
 
-And when I click on the _Confirm Order_ button, I can display a message to show the total bill from the order.
+2 _ I still do really know how to use map(), filter(), and reduce() methods in a function
 
-![assets/2.png](assets/2.png)
+3 _ Apart from that, I need to learn more how to create a function in multy ways
 
-### Food list
+## Anything new I learned while working on this project
 
-Here's the food object :
+1 _ What new thing I learned while working on this project is:
 
-```jsx
-const foods = [
-	{
-		id: 'ravitoto',
-		price: 5000,
-		title: 'Ravitoto',
-		spicy: true,
-		vegetarian: false,
-	},
-	{
-		id: 'pasta',
-		price: 4000,
-		title: 'Pasta',
-		spicy: true,
-		vegetarian: true,
-	},
-	{
-		id: 'burger',
-		price: 5000,
-		title: 'Burger',
-		spicy: false,
-		vegetarian: false,
-	},
-	{
-		id: 'rice',
-		price: 2000,
-		title: 'Rice and Leaves',
-		spicy: false,
-		vegetarian: true,
-	},
-	{
-		id: 'mofogasy',
-		price: 500,
-		title: 'Mofogasy',
-		spicy: false,
-		vegetarian: false,
-	},
-];
-```
+- Using map and filter methods together
 
-The **id** here is a unique string, is role is to identify an element inside the list. The title will be the food name shown to the user.
+## The most challenging part for me on this project
 
-You'll also have an **order** collection, where you will push a food object every time the user add an element to his order.
+1 _ The most challenging part for me on this project is grabbing the add buttons by using event delegation
 
-### Maps, Filter, Reduce, and other friends
+2 _ What is more, I could not manage to add the elements in the order list.
 
--   To generate any list of element (for example, the list of food), **Map** is really useful.
--   To get the full price of list of items, **Reduce** is the perfect use case.
--   To count how many times an item is in a list, you could **Filter** the list and see the length of the result, or use a **Reduce** to count all of the instances.
+## New expanation about a specific topic
 
-But this is just one way to think about that. Feel free to try any other logic you have in mind.
+1 _ I have some specific topic I need to consolidate, such as:
 
-### 💡Tips
+- Event delegation is the first, especially to grab the elements from the dom
 
--   Don't forget to clean your code, and update your readme before Monday morning.
-
-Good luck!
+- I am still struggling to use modal

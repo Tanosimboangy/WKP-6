@@ -92,67 +92,31 @@ const vgtTypeFood = e => {
 vgtCheckbox.addEventListener("change", vgtTypeFood);
 
 
-// if (e.current.Target.matches(".add_button")) {
-// 	console.log();
+
+
+
+// const outerModal = document.querySelector('.outer_modal');
+// const innerModal = document.querySelector('.inner_modal');
+// const confirmOrder = document.querySelector(".order");
+// const confirmationOrder = event => {
+// 	console.log(event);
+// 	const myHTML = `
+// 	<div class="wrapper">
+// 		<h2>
+// 			Thank you!
+// 		</h2>
+// 		<p>
+// 			Your order is confirmed. We will prepare your food, and deliver it when it is ready.
+// 		</p>
+// 		<p>
+// 			The total amount is .
+// 		</p>
+// 	</div>
+// 	`;
+// 	innerModal.innerHTML = myHTML;
+//     outerModal.classList.add('open');
 // }
-
-
-
-// const specialFood = e => {
-//     console.log(foods);
-// }
-// vegetarianFood.addEventListener("click", specialFood);
-
-// const addFirstTypeOfFood = e => {
-//     myHTML = `
-//     <ul>
-//         <li>${}:</li>
-//         <li>${}</li> 
-//         <li>${}r</li>
-//     </ul>
-//     `;
-//     function getById(foods) {
-//         return foods.filter(number => number.identity);
-//     }
-//     console.log(foods);
-// }
-
-// const firstAddButton = document.querySelector('.button_first');
-// const firstAddButton = document.querySelector('.button_first');
-// const secondAddButton = document.querySelector('.button_second');
-// const thirdAddButton = document.querySelector('.button_third');
-// const fourthAddButton = document.querySelector('.button_fourth');
-// const fithAddButton = document.querySelector('.button_fith');
-// const orderList = document.querySelector('.oreder_list');
-// const firstOrder = document.querySelector('.first_order');
-// const secondOrder = document.querySelector('.second_order');
-// const thirdOrder = document.querySelector('.third_order');
-// const fourthOrder = document.querySelector('.fourth_order');
-// const fithOrder = document.querySelector('.fith_order');
-
-
-const outerModal = document.querySelector('.outer_modal');
-const innerModal = document.querySelector('.inner_modal');
-const confirmOrder = document.querySelector(".order");
-const confirmationOrder = event => {
-	console.log(event);
-	const myHTML = `
-	<div class="wrapper">
-		<h2>
-			Thank you!
-		</h2>
-		<p>
-			Your order is confirmed. We will prepare your food, and deliver it when it is ready.
-		</p>
-		<p>
-			The total amount is .
-		</p>
-	</div>
-	`;
-	innerModal.innerHTML = myHTML;
-    outerModal.classList.add('open');
-}
-confirmOrder.addEventListener("click", confirmationOrder);
+// confirmOrder.addEventListener("click", confirmationOrder);
 // const openModal = () => {
 // 	outerModal.classList.add('open');
 // }
@@ -163,3 +127,4 @@ confirmOrder.addEventListener("click", confirmationOrder);
 // 		outerModal.classList.remove('open');
 // 	} 
 // };
+
